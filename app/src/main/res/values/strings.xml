@@ -3,4 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="buttonProximity">Proximity</string>
+    <string name="no_sensor">No sensor</string>
+    <string name="near">Near</string>
+    <string name="far">Far</string>
 </resources>
