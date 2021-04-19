@@ -5,18 +5,27 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".HomeFragment">
+        android:layout_height="match_parent">
 
-
-        <Button
-            android:id="@+id/buttonProximity"
+        <TextView
+            android:id="@+id/sensorValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="@string/buttonProximity"
+            android:text="@string/no_sensor"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/sensorDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="TextView"
+            app:layout_constraintStart_toStartOf="@+id/sensorValue"
+            app:layout_constraintTop_toBottomOf="@+id/sensorValue" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
