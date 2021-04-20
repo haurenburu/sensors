@@ -27,12 +27,12 @@ class AccelerometerFragment : Fragment() {
         sensorManager = context?.getSystemService(Context.SENSOR_SERVICE) as SensorManager
         myAccelerometerSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
 
-        sensorManager.registerListener(proximityListener, myAccelerometerSensor, SensorManager.SENSOR_DELAY_NORMAL)
+        sensorManager.registerListener(accelerometerListener, myAccelerometerSensor, SensorManager.SENSOR_DELAY_NORMAL)
 
         return binding.root
     }
 
-    private var proximityListener = object: SensorEventListener {
+    private var accelerometerListener = object: SensorEventListener {
         override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
         }
         override fun onSensorChanged(event: SensorEvent?) {
@@ -46,6 +46,6 @@ class AccelerometerFragment : Fragment() {
 
     override fun onDestroy() {
         super.onDestroy()
-        sensorManager.unregisterListener(proximityListener)
+        sensorManager.unregisterListener(accelerometerListener)
     }
 }

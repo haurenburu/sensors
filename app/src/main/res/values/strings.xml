@@ -8,4 +8,5 @@
     <string name="far">Far</string>
     <string name="accelerometer">Accelerometer</string>
     <string name="placeholder">placeHolder</string>
+    <string name="light">Light</string>
 </resources>

@@ -23,6 +23,9 @@ class HomeFragment : Fragment() {
         binding.buttonAccelerometer.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_homeFragment_to_accelerometerFragment)
         }
+        binding.buttonLight.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_homeFragment_to_lightFragment)
+        }
 
         return binding.root
     }
