@@ -20,6 +20,9 @@ class HomeFragment : Fragment() {
         binding.buttonProximity.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_homeFragment_to_proximityFragment)
         }
+        binding.buttonAccelerometer.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_homeFragment_to_accelerometerFragment)
+        }
 
         return binding.root
     }

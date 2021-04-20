@@ -13,9 +13,16 @@
         <action
             android:id="@+id/action_homeFragment_to_proximityFragment"
             app:destination="@id/proximityFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_accelerometerFragment"
+            app:destination="@id/accelerometerFragment" />
     </fragment>
     <fragment
         android:id="@+id/proximityFragment"
         android:name="com.example.sensors.ProximityFragment"
         android:label="ProximityFragment" />
+    <fragment
+        android:id="@+id/accelerometerFragment"
+        android:name="com.example.sensors.AccelerometerFragment"
+        android:label="AccelerometerFragment" />
 </navigation>

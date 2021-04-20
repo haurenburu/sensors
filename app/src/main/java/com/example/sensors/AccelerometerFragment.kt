@@ -10,25 +10,24 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.WindowManager
 import androidx.databinding.DataBindingUtil
-import com.example.sensors.databinding.FragmentProximityBinding
+import com.example.sensors.databinding.FragmentAccelerometerBinding
 
-class ProximityFragment : Fragment() {
+class AccelerometerFragment : Fragment() {
 
-    lateinit var binding: FragmentProximityBinding
+    lateinit var binding: FragmentAccelerometerBinding
     lateinit var sensorManager: SensorManager
-    lateinit var myProximitySensor: Sensor
+    lateinit var myAccelerometerSensor: Sensor
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_proximity, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_accelerometer, container, false)
         sensorManager = context?.getSystemService(Context.SENSOR_SERVICE) as SensorManager
-        myProximitySensor = sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY)
+        myAccelerometerSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
 
-        sensorManager.registerListener(proximityListener, myProximitySensor, SensorManager.SENSOR_DELAY_NORMAL)
+        sensorManager.registerListener(proximityListener, myAccelerometerSensor, SensorManager.SENSOR_DELAY_NORMAL)
 
         return binding.root
     }
@@ -36,15 +35,11 @@ class ProximityFragment : Fragment() {
     private var proximityListener = object: SensorEventListener {
         override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
         }
-
         override fun onSensorChanged(event: SensorEvent?) {
-            if(event?.sensor?.type == Sensor.TYPE_PROXIMITY) {
-                binding.sensorValue.text = event.values[0].toString()
-                if (event.values[0] == 0f) {
-                    binding.sensorDistance.text = getString(R.string.near)
-                } else {
-                    binding.sensorDistance.text = getString(R.string.far)
-                }
+            if(event?.sensor?.type == Sensor.TYPE_ACCELEROMETER) {
+                binding.textViewXAxis.text = "X: ".plus(event.values[0].toString())
+                binding.textViewYAxis.text = "Y: ".plus(event.values[1].toString())
+                binding.textViewZAxis.text = "Z: ".plus(event.values[2].toString())
             }
         }
     }

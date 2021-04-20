@@ -6,4 +6,6 @@
     <string name="no_sensor">No sensor</string>
     <string name="near">Near</string>
     <string name="far">Far</string>
+    <string name="accelerometer">Accelerometer</string>
+    <string name="placeholder">placeHolder</string>
 </resources>
