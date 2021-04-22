@@ -26,6 +26,9 @@ class HomeFragment : Fragment() {
         binding.buttonLight.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_homeFragment_to_lightFragment)
         }
+        binding.buttonGyroscope.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_homeFragment_to_gyroScopeFragment)
+        }
 
         return binding.root
     }

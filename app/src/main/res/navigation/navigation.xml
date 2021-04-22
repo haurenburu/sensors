@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_homeFragment_to_lightFragment"
             app:destination="@id/lightFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_gyroScopeFragment"
+            app:destination="@id/gyroScopeFragment" />
     </fragment>
     <fragment
         android:id="@+id/proximityFragment"
@@ -33,4 +36,8 @@
         android:name="com.example.sensors.LightFragment"
         android:label="fragment_light"
         tools:layout="@layout/fragment_light" />
+    <fragment
+        android:id="@+id/gyroScopeFragment"
+        android:name="com.example.sensors.GyroScopeFragment"
+        android:label="GyroScopeFragment" />
 </navigation>
