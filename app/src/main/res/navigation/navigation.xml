@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.sensors.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_proximityFragment"
+            app:destination="@id/proximityFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_accelerometerFragment"
+            app:destination="@id/accelerometerFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_lightFragment"
+            app:destination="@id/lightFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_gyroScopeFragment"
+            app:destination="@id/gyroScopeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/proximityFragment"
+        android:name="com.example.sensors.ProximityFragment"
+        android:label="ProximityFragment" />
+    <fragment
+        android:id="@+id/accelerometerFragment"
+        android:name="com.example.sensors.AccelerometerFragment"
+        android:label="AccelerometerFragment" />
+    <fragment
+        android:id="@+id/lightFragment"
+        android:name="com.example.sensors.LightFragment"
+        android:label="fragment_light"
+        tools:layout="@layout/fragment_light" />
+    <fragment
+        android:id="@+id/gyroScopeFragment"
+        android:name="com.example.sensors.GyroScopeFragment"
+        android:label="GyroScopeFragment" />
+</navigation>

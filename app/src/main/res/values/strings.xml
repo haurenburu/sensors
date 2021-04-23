@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">sensors</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="buttonProximity">Proximity</string>
+    <string name="no_sensor">No sensor</string>
+    <string name="near">Near</string>
+    <string name="far">Far</string>
+    <string name="accelerometer">Accelerometer</string>
+    <string name="placeholder">placeHolder</string>
+    <string name="light">Light</string>
+    <string name="gyroscope">GyroScope</string>
+    <string name="right">Right</string>
+    <string name="left">Left</string>
+</resources>
